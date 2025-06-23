@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* --------variables-------- */
+:root {
+    --space: 2rem;
+    --main-color: #7B3F00;
+    --light-brown-color: rgba(211, 84, 0);
+    --pink-opacity: #ffe6e9;
+    --white-alpha-40: rgba(255, 255, 255, 0.40);
+    --white-alpha-25: rgba(255, 255, 255, 0.25);
+    --backdrop-filter: blur(5px);
+    --box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.40);
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-image: url(../images/bg-img-1.jpg) !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.header {
+    background-color: var(--white-alpha-25);
+    border: 2px solid var(--white-alpha-40);
+    backdrop-filter: var(--backdrop-filter);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    width: 100%;
+}
+/* -----------------header section----------- */
+.heading {
+    color: rgba(0, 0, 0, 0.72);
+    font-size: 30px;
+    text-align: center;
+    margin-top: 2rem;
+
+}
+
+.search-form {
+    width: 30rem;
+    height: 4rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    background-color: var(--pink-opacity);
+    margin-top: 1rem;
+    margin-right: 30px;
+}
+
+.search-form input {
+    width: 100%;
+    background: none;
+    font-size: 1.1rem;
+    box-shadow: none;
+}
+
+.search-form button {
+    font-size: 1.1rem;
+    color: var(--main-color);
+    cursor: pointer;
+    background: none;
+    box-shadow: none;
+}
+
+/* -----------form controler------------- */
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 50px;
+    padding-right: 20px;
+    position: relative;
+}
+
+.form-container form {
+    background-color: var(--white-alpha-25);
+    border: 2px solid var(--white-alpha-40);
+    backdrop-filter: var(--backdrop-filter);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    padding: 0 1rem 0 1rem;
+    padding-right: -10px;
+    padding: 2rem;
+    margin-top: 3rem;
+    
+}
+
+.form-container form .box {
+    background-color: var(--white-alpha-25);
+    border: 2px solid var(--white-alpha-40);
+    backdrop-filter: var(--backdrop-filter);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    border-radius: .5rem;
+    margin: .5rem 0;
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+
+.form-container form .flex {
+    display: flex;
+    gap: 2rem;
+}
+.form-container .register {
+    width: 60rem;
+}
+
+.form-container form p {
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.form-container form p span {
+    color: red !important;
+}
+
+.form-container form .btn {
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+.flex-btn a {
+    justify-content: space-between;
+    margin-top: 20px !important;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.flex-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+
+.btn {
+    background-color: var(--white-alpha-25);
+    border: 2px solid var(--white-alpha-40);
+    backdrop-filter: var(--backdrop-filter);
+    box-shadow: var(--box-shadow);
+    text-transform: capitalize;
+    color: black;
+    padding: .8rem 2rem;
+    border-radius: 1.5rem;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    justify-content: space-between;
+
+}
+
+.btn::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 20px;
+    background-color: var(--main-color);
+    z-index: -1;
+    transition: width 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover::before {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+.empty {
+    background-color: var(--white-alpha-25);
+    border: 2px solid var(--white-alpha-40);
+    backdrop-filter: var(--backdrop-filter);
+    box-shadow: var(--box-shadow);
+    text-transform: capitalize;
+    color: var(--main-color);
+    padding: 1.5rem;
+    text-align: center;
+    margin: 2rem auto;
+    width: 50vw;
+    border-radius: .5rem;
+    line-height: 2;
+}
+
+.empty p {
+    font-size: 20px;
+
+}
+/* -----in index read products */
+table {
+    margin-top: 5%;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: var(--backdrop-filter);
+    justify-content: space-around;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ccc;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+}
+
+th,
+td {
+    padding: 20px;
+    text-align: left;
+}
